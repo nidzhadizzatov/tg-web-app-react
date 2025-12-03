@@ -1,8 +1,9 @@
 import React from 'react'
 import Button from '../Button/Button.jsx';
 import {useTelegram} from '../../../hooks/useTelegram.js';
+
     const Header = () => {
-        const { onClose, user} = useTelegram();
+        const { onClose, user, tg} = useTelegram();
 
       return (
         <div>
