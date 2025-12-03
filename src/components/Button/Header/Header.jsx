@@ -4,7 +4,7 @@ import React from 'react';
 import { useTelegram } from '../../../hooks/useTelegram.js';
 
 function Header() {
-  const { onToggleButton, tg, onClose } = useTelegram();
+  const { onToggleButton, onClose } = useTelegram();
 
   return (
     <header className="App-header">
@@ -15,4 +15,3 @@ function Header() {
 }
 
 export default Header;
-// ...existing code...
