@@ -1,21 +1,18 @@
-import './App.css';
-import React, { useEffect } from 'react';
-import { useTelegram } from './hooks/useTelegram.js';
+// ...existing code...
+import '../../App.css';
+import React from 'react';
+import { useTelegram } from '../../../hooks/useTelegram.js';
 
-function App() {
+function Header() {
   const { onToggleButton, tg, onClose } = useTelegram();
 
-  useEffect(() => {
-    if (tg?.ready) tg.ready();
-  }, [tg]);
-
   return (
-    <div className="App">
-      work
+    <header className="App-header">
       <button onClick={onToggleButton}>Toggle MainButton</button>
       <button onClick={onClose}>Закрыть</button>
-    </div>
+    </header>
   );
 }
 
-export default App;
+export default Header;
+// ...existing code...

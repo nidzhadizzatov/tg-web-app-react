@@ -1,24 +1,23 @@
+// ...existing code...
 import './App.css';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useTelegram } from './hooks/useTelegram.js';
-import React from 'react';
 
 function App() {
-const {onToggleButton,tg} = useTelegram();
+  const { onToggleButton, tg, onClose } = useTelegram();
 
-  
   useEffect(() => {
-    tg.ready();
-  }, []);
-  const onClose = () => {
-    tg.close();
-  }
+    if (tg?.ready) tg.ready();
+  }, [tg]);
+
   return (
     <div className="App">
       work
-      <button onClick={onToggleButton}>Закрыть</button>
+      <button onClick={onToggleButton}>Toggle MainButton</button>
+      <button onClick={onClose}>Закрыть</button>
     </div>
   );
 }
 
 export default App;
+// ...existing code...
