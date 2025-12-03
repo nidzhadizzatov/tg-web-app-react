@@ -1,5 +1,5 @@
 // ...existing code...
-import '../../App.css';
+import '../../../App.css';
 import React from 'react';
 import { useTelegram } from '../../../hooks/useTelegram.js';
 
