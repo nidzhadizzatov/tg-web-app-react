@@ -2,9 +2,9 @@
 import './App.css';
 import React, { useEffect } from 'react';
 import { useTelegram } from './hooks/useTelegram.js';
-
+import Header from './components/Button/Header/Header.jsx';
 function App() {
-  const { onToggleButton, tg, onClose } = useTelegram();
+  const { onToggleButton, tg } = useTelegram();
 
   useEffect(() => {
     if (tg?.ready) tg.ready();
@@ -12,12 +12,10 @@ function App() {
 
   return (
     <div className="App">
-      work
-      <button onClick={onToggleButton}>Toggle MainButton</button>
-      <button onClick={onClose}>Закрыть</button>
+      <Header/>
+      <button onClick={onToggleButton}>Toggle</button>
     </div>
   );
 }
 
 export default App;
-// ...existing code...
